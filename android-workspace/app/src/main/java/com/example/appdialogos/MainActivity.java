@@ -96,15 +96,26 @@ public class MainActivity extends AppCompatActivity {
                         .setMultiChoiceItems(dias, null, new DialogInterface.OnMultiChoiceClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                                
+                                // Guardar índice seleccionado
                                 if(isChecked){
-                                    //Guardar índice seleccionado
                                     itemsSeleccionados.add(which);
-                                    Toast.makeText(MainActivity.this, "Checks seleccionados:(" + itemsSeleccionados.size() + ")", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(
+                                        MainActivity.this,
+                                        "Checks seleccionados:(" + itemsSeleccionados.size() + ")",
+                                        Toast.LENGTH_SHORT
+                                    ).show();
+                                
+                                // Remover índice sini selección
                                 } else {
-                                    // Remover índice sini selección
                                     itemsSeleccionados.remove(which);
-                                    Toast.makeText(MainActivity.this, "Checks seleccionados:("+itemsSeleccionados.size()+")", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(
+                                        MainActivity.this,
+                                        "Checks seleccionados:("+itemsSeleccionados.size()+")",
+                                        Toast.LENGTH_SHORT
+                                    ).show();
                                 }
+                            
                             }
                         });
                 AlertDialog dialogo= builder.create();
