@@ -3,13 +3,11 @@ package com.example.appdatepickerdialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TimePicker;
 
 import java.util.Calendar;
 
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         EditText textoFecha = (EditText) findViewById(R.id.etFecha);
-                        String fecha = String.valueOf(year + month + dayOfMonth);
+                        String fecha = String.valueOf(year+1 +"/"+ month +"/"+ dayOfMonth);
                         textoFecha.setText(fecha);
                     }
                 },year,month,day);
